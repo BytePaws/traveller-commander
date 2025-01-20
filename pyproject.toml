@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "commander"
+version = "0.1.0"
+description = "Character & Ship management programm for the Traveller P&P RPG"
+authors = ["Tiara Hock <tiara.dev@proton.me>"]
+license = "GPL-3.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+rich = "^13.9.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
