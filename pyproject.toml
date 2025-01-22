@@ -1,16 +1,55 @@
-[tool.poetry]
-name = "commander"
-version = "0.1.0"
-description = "Character & Ship management programm for the Traveller P&P RPG"
-authors = ["Tiara Hock <tiara.dev@proton.me>"]
-license = "GPL-3.0"
-readme = "README.md"
-
-[tool.poetry.dependencies]
-python = "^3.11"
-rich = "^13.9.4"
-
-
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "traveller-commander"
+dynamic = ["version"]
+description = 'Character and ship management tool for the traveller P&P RPG'
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "BytePaws", email = "tiara.dev@proton.me" },
+]
+classifiers = [
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+dependencies = []
+
+[project.urls]
+Documentation = "https://github.com/ByteOtter/traveller-commander#readme"
+Issues = "https://github.com/ByteOtter/traveller-commander/issues"
+Source = "https://github.com/ByteOtter/traveller-commander"
+
+[tool.hatch.version]
+path = "src/traveller_commander/__about__.py"
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/traveller_commander tests}"
+
+[tool.coverage.run]
+source_pkgs = ["traveller_commander", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/traveller_commander/__about__.py",
+]
+
+[tool.coverage.paths]
+traveller_commander = ["src/traveller_commander", "*/traveller-commander/src/traveller_commander"]
+tests = ["tests", "*/traveller-commander/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
