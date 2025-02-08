@@ -18,7 +18,14 @@ classifiers = [
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
 ]
-dependencies = []
+dependencies = [
+  "textual",
+]
+
+[project.optional-dependencies]
+dev = [
+  "black",
+]
 
 [project.urls]
 Documentation = "https://github.com/ByteOtter/traveller-commander#readme"
