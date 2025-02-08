@@ -1,0 +1,17 @@
+[
+    { "tonnage": 100, "code": "1", "base_price": 2 },
+    { "tonnage": 200, "code": "2", "base_price": 8 },
+    { "tonnage": 300, "code": "3", "base_price": 12 },
+    { "tonnage": 400, "code": "4", "base_price": 16 },
+    { "tonnage": 500, "code": "5", "base_price": 32 },
+    { "tonnage": 600, "code": "6", "base_price": 48 },
+    { "tonnage": 700, "code": "7", "base_price": 64 },
+    { "tonnage": 800, "code": "8", "base_price": 80 },
+    { "tonnage": 900, "code": "9", "base_price": 90 },
+    { "tonnage": 1000, "code": "A", "base_price": 100 },
+    { "tonnage": 1200, "code": "C", "base_price": 120 },
+    { "tonnage": 1400, "code": "E", "base_price": 140 },
+    { "tonnage": 1600, "code": "G", "base_price": 160 },
+    { "tonnage": 1800, "code": "J", "base_price": 180 },
+    { "tonnage": 2000, "code": "L", "base_price": 200 }
+]
